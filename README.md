@@ -29,5 +29,15 @@ The Oracle Enterprise Manager was configured. Below is the storage view showing 
 
 ---
 
+## 4. Challenges Faced & Solutions
+During this assignment, I encountered and resolved the following technical issues:
+
+* **Authentication Errors (ORA-01017):** Initially failed to log in as a super-admin. Resolved by using the specific syntax `sys as sysdba` to gain administrative privileges.
+* **Restricted Queries (ORA-01219):** Encountered an error where the database was "mounted" but not "open." Resolved this by executing `ALTER PLUGGABLE DATABASE OPEN` to allow user queries.
+* **PDB File Management (ORA-65016):** Faced issues during PDB creation regarding file locations. Resolved by using the `FILE_NAME_CONVERT` parameter to correctly map the seed files to the new directory.
+* **OEM Visualization:** Noticed that the OEM graphical interface was not displaying active sessions. Verified the configuration by drilling down into the **Tablespace Storage** view to confirm physical file locations.
+
+---
+
 ## Integrity Statement
 I confirm that this is my individual work.
